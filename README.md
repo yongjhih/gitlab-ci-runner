@@ -58,16 +58,16 @@ b) MacOSX (make sure you have the Xcode command line tools installed), UNTESTED
 
 Download the code for the runner:
 
-    # Use any directory you like
-    mkdir ~/gitlab-runners
-    cd ~/gitlab-runners
+[make sure you install any system dependancies first]
+
+    cd /home/gitlab_ci_runners
     git clone https://github.com/gitlabhq/gitlab-ci-runner.git
     cd gitlab-ci-runner
 
 Install the gems for the runner:
 
-    gem install bundler
-    bundle install
+    sudo gem install bundler
+    sudo -u gitlab_ci_runner -H bundle install --deployment --without development test postgres aws
 
 Setup the runner interactively:
 
