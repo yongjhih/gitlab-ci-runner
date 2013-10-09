@@ -67,7 +67,7 @@ Download the code for the runner:
 Install the gems for the runner:
 
     sudo gem install bundler
-    sudo -u gitlab_ci_runner -H bundle install --deployment --without development test postgres aws
+    sudo -u gitlab_ci_runner -H bundle install --deployment
 
 Setup the runner interactively:
 
